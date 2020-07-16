@@ -78,6 +78,7 @@ data Scope
   | ScopeGmailSend
   | ScopeDriveFile
   | ScopeDriveMetadataRead
+  | ScopeFirebaseMessaging
   deriving (Eq, Show, Read, Ord)
 
 {-| Make sure if you added new scope, update configuration in page bellow.
@@ -89,6 +90,7 @@ scopeUrl ScopeCalendarRead = "https://www.googleapis.com/auth/calendar.readonly"
 scopeUrl ScopeGmailSend = "https://www.googleapis.com/auth/gmail.send"
 scopeUrl ScopeDriveFile = "https://www.googleapis.com/auth/drive.file"
 scopeUrl ScopeDriveMetadataRead = "https://www.googleapis.com/auth/drive.metadata.readonly"
+scopeUrl ScopeFirebaseMessaging = "https://www.googleapis.com/auth/firebase.messaging"
 
 -- | Get the private key obtained from the
 -- Google API Console from a PEM 'String'.
